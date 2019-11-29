@@ -24,16 +24,15 @@
         }
     </style>
 
-==============================
-Computer Based Problem Solving
-==============================
+==================
+Math Practice Game
+==================
 
-.. image:: /images/ComputerBasedProblemSolving.png
-   :alt: Computer Based Problem Solving
+.. image:: https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b7336548-4e70-4dd4-a8f4-7ad11ca0c933/d74oog-d15a7589-5d00-499a-884f-8865a2d2c60c.jpg
+   :alt: Math Solving 
    :align: center
 
-The goal of this book is to take students from the point of never having done any formal programming and lead them first through a structured method of problem solving (Input-Process-Output and Top-Down design), then into basic Structured Programming and then into the early basics of Object Oriented Programming (or OOP). If this book is used to teach a high school course in computer programming, there are likely many other learning outcomes that students are required to do that are not presented in this book. The focus of this book is strictly on solving problems with computer programming.
-
+The goal of this book is to show other people that what this program is and how it works
 .. toctree::
    :maxdepth: 2
    :hidden:
