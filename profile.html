@@ -1,59 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!--Cognito JavaScript-->
+    <script src="js/amazon-cognito-identity.min.js"></script>
+    <script src="js/config.js"></script>
+    <script type="text/javascript" src="js/profile.js"></script>
+  </head>
 
-// Created by: Mr. Coxall
-// Created on: Jan 2020
-// This function returns a row from our chocolate_user DynamoDB
-//   2nd function just class the first one, but provides error checking for debugging
+  <body>
+    <div class="container">
+      <div>
+        <h1>Profile</h1>
+      </div>
+      <div id='profile'>
+        <p>One moment please ...</p>
+      </div>
+    <div>
 
-/* global fetch */   // so that you do not get a warning about the fetch function
-
-async function getUser(email_address) {
-  // get the user info from API
-
-  const api_url = 'https://73m0qekp2j.execute-api.us-east-1.amazonaws.com/prod/user-profile?email_address=' + email_address;
-  const api_response = await fetch(api_url);
-  const api_data = await(api_response).json();
-  const user_info = JSON.parse(api_data['body']);
-  const div = document.getElementById('user_info');
-  var html_table = ' \
-    <table border=1> \
-      <tr> \
-        <th>Firstname</th> \
-        <th>Lastname</th> \
-        <th>Age</th> \
-        <th>Email</th> \
-      </tr>';
-
-  if (Object.entries(user_info).length === 0 && user_info.constructor === Object) {
-    // check if response id empty
-
-    html_table = html_table + ' \
-        <tr> \
-          <td colspan="4">No data!</td> \
-        </tr> \
-      <table> \
-    ';
-  } else {
-    // if there is data, place it in the table
-
-    html_table = html_table + ' \
-        <tr> \
-          <td>' + user_info['first_name'] + '</td> \
-          <td>' + user_info['last_name'] + '</td> \
-          <td>' + user_info['age'] + '</td> \
-          <td>' + user_info['email'] + '</td> \
-        </tr> \
-      <table> \
-    ';
-  }
-  div.innerHTML = html_table;
-}
-
-function getUserProfile(email_address) {
-  getUser(email_address)
-    .then(success => {
-      console.log("Got the API data correctly")
-    })
-    .catch(error => {
-      console.error(error);
-    });
-}
+    <br>
+    <div id='home'>
+      <p>
+        <a href='./index.html'>Home</a>
+      </p>
+    </div>
+  </body>
+  <script>
+    window.onload = function(){
+      const temp_var = getUserAttributes();
+    }
+  </script>
+</html>
