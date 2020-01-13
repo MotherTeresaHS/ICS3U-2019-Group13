@@ -20,7 +20,7 @@ async function getUser(email_address) {
     div_user_profile_first_name.innerHTML = json_profile['first_name'];
     div_user_profile_last_name.innerHTML = json_profile['last_name'];
 	console.log(json_profile);
-    div_user_profile_highest_score.innerHTML = json_profile['hghest_score'];
+    div_user_profile_highest_score.innerHTML = json_profile['highest_score'];
     
 
   }
