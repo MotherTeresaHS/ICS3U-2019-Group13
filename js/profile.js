@@ -14,11 +14,12 @@ async function getUser(email_address) {
     const div_user_profile_last_name = document.getElementById('profile_last_name');
     const div_user_profile_highest_score = document.getElementById('profile_highest_score');
     
-	console.log(div_user_profile_last_name);
-	console.log(div_user_profile_highest_score);
+
     div_user_profile_email.innerHTML = json_profile['email'];
     div_user_profile_first_name.innerHTML = json_profile['first_name'];
     div_user_profile_last_name.innerHTML = json_profile['last_name'];
+	console.log(div_user_profile_last_name);
+	console.log(div_user_profile_highest_score);
 	console.log(json_profile);
     div_user_profile_highest_score.innerHTML = json_profile['highest_score'];
     
