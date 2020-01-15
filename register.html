@@ -17,8 +17,6 @@
     <h1 class="h3 mb-3 font-weight-normal" id="titleheader">Register an Account</h1>
 	
     <input type="email" class="form-control" id="emailInputRegister" placeholder="Email" pattern=".*" required>
-	<input type="name" class="form-control" id="nameInputRegister" placeholder="Name" pattern=".*" required>
-	<input type="family_name" class="form-control" id="familyNameInputRegister" placeholder="Family Name" pattern=".*" required>
 	<input type="password" class="form-control" id="passwordInputRegister" placeholder="Password" pattern=".*" required>
     <input type="password" class="form-control" id="confirmationpassword" placeholder="Confirm Password" pattern=".*" required>
 	<button id="mainbutton" class="btn btn-lg btn-primary btn-block" type="button" onclick="registerButton()" >Register</button>
@@ -26,16 +24,12 @@
 	<script>
 
 		var username;
-		var name;
-		var family_name;
 		var password;
 		var poolData;
 			
 	  function registerButton() {
 		
 		username = document.getElementById("emailInputRegister").value;
-		name = document.getElementById("nameInputRegister").value;
-		familyname = document.getElementById("familyNameInputRegister").value;
 		
 		if (document.getElementById("passwordInputRegister").value != document.getElementById("confirmationpassword").value) {
 			alert("Passwords Do Not Match!")
@@ -64,7 +58,7 @@
 		
 		attributeList.push(attributeEmail);
 
-		userPool.signUp(username, name, familyname, password, attributeList, null, function(err, result){
+		userPool.signUp(username, password, attributeList, null, function(err, result){
 			if (err) {
 				alert(err.message || JSON.stringify(err));
 				return;
