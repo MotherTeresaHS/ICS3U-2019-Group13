@@ -42,7 +42,7 @@ function registerButton() {
 		cognitoUser = result.user;
 		console.log('user name is ' + cognitoUser.getUsername());
 		//change elements of page
-		document.getElementById("titleheader").innerHTML = "Check your email for a verification link";
+		alert("Check your email for a verification link!")
 		
 	});
 }
