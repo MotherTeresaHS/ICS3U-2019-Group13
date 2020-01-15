@@ -21,6 +21,7 @@
   	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.596.0.min.js"></script> 
   	<script src="./js/amazon-cognito-identity.min.js"></script>   
   	<script src="./js/config.js"></script>
+	<script src="./js/register.js"></script>
   	<script type="text/javascript" src="./js/sign-in.js"></script>
     
     <title>Chocolates</title>
@@ -66,8 +67,8 @@
     
 		<div class="container">
       <div>
-        <h2>Sign In</h2>
-        <div id='sign-in'>
+        <h2>Sign Up</h2>
+        <div id='sign-up'>
         </div>
       </div>
 		</div>
@@ -76,22 +77,26 @@
     	<main class="mdl-layout__content">
     		<div class="mdl-card mdl-shadow--6dp">
     			<div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-    				<h2 class="mdl-card__title-text">Chocolate Login</h2>
+    				<h2 class="mdl-card__title-text">Chocolate Sign Up</h2>
     			</div>
     	  	<div class="mdl-card__supporting-text">
     				<form action="#">
     					<div class="mdl-textfield mdl-js-textfield">
-    						<input class="mdl-textfield__input" type="text" id="inputUsername" />
+    						<input class="mdl-textfield__input" type="text" id="emailInputRegister" />
     						<label class="mdl-textfield__label" for="username">Email Address</label>
     					</div>
     					<div class="mdl-textfield mdl-js-textfield">
-    						<input class="mdl-textfield__input" type="password" id="inputPassword" />
+    						<input class="mdl-textfield__input" type="password" id="passwordInputRegister" />
     						<label class="mdl-textfield__label" for="userpass">Password</label>
+    					</div>
+						<div class="mdl-textfield mdl-js-textfield">
+    						<input class="mdl-textfield__input" type="password" id="confirmationpassword" />
+    						<label class="mdl-textfield__label" for="userpass">Confirm Password</label>
     					</div>
     				</form>
     			</div>
     			<div class="mdl-card__actions mdl-card--border">
-    				<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="signInButton();">Log in</button>
+    				<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="registerButton();">Sign up</button>
     			</div>
     		</div>
     	</main>
