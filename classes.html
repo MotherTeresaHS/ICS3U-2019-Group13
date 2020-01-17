@@ -42,7 +42,6 @@
             <a class="mdl-navigation__link" href="./register.html">Register</a>
             <a class="mdl-navigation__link" href="./sign-in.html">Sign In</a>
    		    <a class="mdl-navigation__link" href="./profile.html">Profile</a>
-		    <a class="mdl-navigation__link" href="./classes.html">classes</a>
             <a class="mdl-navigation__link" href="./sign-out.html">Sign Out</a>
           </nav>
         </div>
@@ -54,7 +53,6 @@
           <a class="mdl-navigation__link" href="./register.html">Register</a>
           <a class="mdl-navigation__link" href="./sign-in.html">Sign In</a>
 		  <a class="mdl-navigation__link" href="./profile.html">Profile</a>
-		  <a class="mdl-navigation__link" href="./classes.html">classes</a>
           <a class="mdl-navigation__link" href="./sign-out.html">Sign Out</a>
         </nav>
       </div>
@@ -68,7 +66,7 @@
     
 		<div class="container">
       <div>
-        <h2>Update name</h2>
+        <h2>Update Classes</h2>
         <div id='sign-in'>
         </div>
       </div>
@@ -78,19 +76,26 @@
     	<main class="mdl-layout__content">
     		<div class="mdl-card mdl-shadow--6dp">
     			<div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-    				<h2 class="mdl-card__title-text">Information update</h2>
+    				<h2 class="mdl-card__title-text">update your classes</h2>
     			</div>
     	  	<div class="mdl-card__supporting-text">
     				<form action="#">
     					<div class="mdl-textfield mdl-js-textfield">
-    						<input class="mdl-textfield__input" type="text" id="name" />
-    						<label class="mdl-textfield__label" for="username">Name</label>
+    						<input class="mdl-textfield__input" type="text" id="period1" />
+    						<label class="mdl-textfield__label" for="username">Period 1</label>
     					</div>
     					<div class="mdl-textfield mdl-js-textfield">
-    						<input class="mdl-textfield__input" type="text" id="lastName" />
-    						<label class="mdl-textfield__label" for="userpass">Last Name</label>
+    						<input class="mdl-textfield__input" type="text" id="period2" />
+    						<label class="mdl-textfield__label" for="userpass">Period 2</label>
     					</div>
-						
+						<div class="mdl-textfield mdl-js-textfield">
+    						<input class="mdl-textfield__input" type="text" id="period3" />
+    						<label class="mdl-textfield__label" for="userpass">Period 3</label>
+    					</div>
+						<div class="mdl-textfield mdl-js-textfield">
+    						<input class="mdl-textfield__input" type="text" id="period4" />
+    						<label class="mdl-textfield__label" for="userpass">Period 4</label>
+    					</div>
     				</form>
     			</div>
     			<div class="mdl-card__actions mdl-card--border">
@@ -110,9 +115,11 @@
 	<script>
 		async function update(email_address) {
 		// get the user info from API Gate
-		first_name =  document.getElementById("name").value;
-		last_name =  document.getElementById("lastName").value;
-		const api_url = 'https://dwf7d1jmd9.execute-api.us-east-1.amazonaws.com/prod/update-info?' + 'email_address=' + email_address + '&first_name=' + first_name + '&last_name=' + last_name;
+		period1 =  document.getElementById("period1").value;
+		period2 =  document.getElementById("period2").value;
+		period3 =  document.getElementById("period3").value;
+		period4 =  document.getElementById("period4").value;
+		const api_url = 'https://qmvpg5o7v3.execute-api.us-east-1.amazonaws.com/prod/update-classes?' + 'email_address=' + email_address + '&period1=' + period1 + '&period2=' + period2 + '&period3=' + period3+ '&period4=' + period4;
 		alert("Updated")
 		const api_response = await fetch(api_url);
 		const api_data = await(api_response).json();

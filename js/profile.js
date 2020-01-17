@@ -22,10 +22,10 @@ async function getUser(email_address) {
     div_user_profile_email.innerHTML = json_profile['email'];
     div_user_profile_first_name.innerHTML = json_profile['first_name'];
     div_user_profile_last_name.innerHTML = json_profile['last_name'];
-    div_user_profile_period_one.innerHTML = json_profile['period_one'];
-    div_user_profile_period_two.innerHTML = json_profile['period_two'];
-    div_user_profile_period_three.innerHTML = json_profile['period_three'];
-    div_user_profile_period_four.innerHTML = json_profile['period_four'];
+    div_user_profile_period_one.innerHTML = json_profile['period1'];
+    div_user_profile_period_two.innerHTML = json_profile['period2'];
+    div_user_profile_period_three.innerHTML = json_profile['period3'];
+    div_user_profile_period_four.innerHTML = json_profile['period4'];
 
 	console.log(div_user_profile_first_name);
 	console.log(div_user_profile_last_name);
@@ -37,6 +37,8 @@ async function getUser(email_address) {
     
 
   }
+  
+  
   
 function getUserAttributes() {
 	var data = { 
