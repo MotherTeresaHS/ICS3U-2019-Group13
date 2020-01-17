@@ -9,6 +9,7 @@ async function getUser(email_address) {
     console.log(api_data);
     
     const json_profile = JSON.parse(api_data['body']);
+    const json_profile_body = JSON.parse(json_profile['body']);
     const div_user_profile_email = document.getElementById('profile_email');
     const div_user_profile_first_name = document.getElementById('profile_first_name');
     const div_user_profile_last_name = document.getElementById('profile_last_name');
@@ -22,10 +23,10 @@ async function getUser(email_address) {
     div_user_profile_email.innerHTML = json_profile['email'];
     div_user_profile_first_name.innerHTML = json_profile['first_name'];
     div_user_profile_last_name.innerHTML = json_profile['last_name'];
-    div_user_profile_period_one.innerHTML = json_profile['period1'];
-    div_user_profile_period_two.innerHTML = json_profile['period2'];
-    div_user_profile_period_three.innerHTML = json_profile['period3'];
-    div_user_profile_period_four.innerHTML = json_profile['period4'];
+    div_user_profile_period_one.innerHTML = json_profile_body['period1'];
+    div_user_profile_period_two.innerHTML = json_profile_body['period2'];
+    div_user_profile_period_three.innerHTML = json_profile_body['period3'];
+    div_user_profile_period_four.innerHTML = json_profile_body['period4'];
 
 	console.log(div_user_profile_first_name);
 	console.log(div_user_profile_last_name);
