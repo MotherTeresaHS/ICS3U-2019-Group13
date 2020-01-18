@@ -24,11 +24,19 @@ You will need the following items:
   :titlesonly:
 
   self
-  install/index
-  install2/index
-  install3/index
-  install4/index
-  install/index
+  jan_06/index
+  jan_07/index
+  jan_08/index
+  jan_09/index
+  jan_10/index
+  jan_11/index
+  jan_12/index
+  jan_13/index
+  jan_14/index
+  jan_15/index
+  jan_16/index
+  jan_17/index
+  
 
   ide/index
   image_bank/index
