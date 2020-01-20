@@ -9,6 +9,7 @@
     <meta name="author" content="Amir Mersad">
     <meta name="date" content="Jan 2020">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
     
     <!--Google's MDL-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -43,6 +44,7 @@
             <a class="mdl-navigation__link" href="./register.html">Register</a>
             <a class="mdl-navigation__link" href="./sign-in.html">Sign In</a>
             <a class="mdl-navigation__link" href="./sign-out.html">Sign Out</a>
+			<a class="mdl-navigation__link" href="./contact.html">Contact Us</a>
           </nav>
         </div>
       </header>
@@ -53,6 +55,7 @@
           <a class="mdl-navigation__link" href="./register.html">Register</a>
           <a class="mdl-navigation__link" href="./sign-in.html">Sign In</a>
           <a class="mdl-navigation__link" href="./sign-out.html">Sign Out</a>
+		  <a class="mdl-navigation__link" href="./contact.html">Contact Us</a>
         </nav>
       </div>
       <main class="mdl-layout__content">
@@ -71,13 +74,14 @@
       </div>
 		</div>
     
-    <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+    <div style="text-align:center">
+	
     	<main class="mdl-layout__content">
     		<div class="mdl-card mdl-shadow--6dp">
     			<div class="mdl-card__title mdl-color--primary mdl-color-text--white">
     				<h2 class="mdl-card__title-text">Math Sign Up</h2>
     			</div>
-    	  	<div class="mdl-card__supporting-text">
+				<div class="mdl-card__supporting-text" style="text-align:center">
     				<form action="#">
     					<div class="mdl-textfield mdl-js-textfield">
     						<input class="mdl-textfield__input" type="text" id="emailInputRegister" />
@@ -91,8 +95,11 @@
     						<input class="mdl-textfield__input" type="password" id="confirmationpassword" />
     						<label class="mdl-textfield__label" for="userpass">Confirm Password</label>
     					</div>
+						<div class="mdl-textfield mdl-js-textfield">
+    						<p class="mdl-card__title-text">Password must contain at least 1 Uppercase, lowercase, number and special character </p>
+						</div>
     				</form>
-    			</div>
+				</div>
     			<div class="mdl-card__actions mdl-card--border">
     				<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="registerButton();">Sign up</button>
     			</div>

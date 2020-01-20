@@ -19,12 +19,14 @@
   	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.596.0.min.js"></script> 
   	<script src="./js/amazon-cognito-identity.min.js"></script>   
   	<script src="./js/config.js"></script>
-  	<script type="text/javascript" src="./js/sign-in.js"></script>
+  	<script src="./js/classes.js"></script>
     
     <title>Math</title>
   </head>
   
   <body>
+   	<script src="./js/classes.js"></script>
+  	<script type="text/javascript" src="./js/classes.js"></script>
     <!-- Always shows a header, even in smaller screens. -->
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
@@ -38,7 +40,8 @@
             <a class="mdl-navigation__link" href="./index.html">Home</a>
             <a class="mdl-navigation__link" href="./register.html">Register</a>
             <a class="mdl-navigation__link" href="./sign-in.html">Sign In</a>
-			<a class="mdl-navigation__link" href="./profile.html">Profile</a>
+   		    <a class="mdl-navigation__link" href="./profile.html">Profile</a>
+			<a class="mdl-navigation__link" href="./update.html">update</a>
             <a class="mdl-navigation__link" href="./sign-out.html">Sign Out</a>
 			<a class="mdl-navigation__link" href="./contact.html">Contact Us</a>
           </nav>
@@ -51,6 +54,7 @@
           <a class="mdl-navigation__link" href="./register.html">Register</a>
           <a class="mdl-navigation__link" href="./sign-in.html">Sign In</a>
 		  <a class="mdl-navigation__link" href="./profile.html">Profile</a>
+		  <a class="mdl-navigation__link" href="./update.html">update</a>
           <a class="mdl-navigation__link" href="./sign-out.html">Sign Out</a>
 		  <a class="mdl-navigation__link" href="./contact.html">Contact Us</a>
         </nav>
@@ -65,33 +69,42 @@
     
 		<div class="container">
       <div>
-        <h2>Sign In</h2>
+        <h2>Update Classes</h2>
         <div id='sign-in'>
         </div>
       </div>
 		</div>
     
-    <div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+    <div style="text-align:center"">
     	<main class="mdl-layout__content">
     		<div class="mdl-card mdl-shadow--6dp">
     			<div class="mdl-card__title mdl-color--primary mdl-color-text--white">
-    				<h2 class="mdl-card__title-text">Math Login</h2>
+    				<h2 class="mdl-card__title-text">update your classes</h2>
     			</div>
     	  	<div class="mdl-card__supporting-text">
-    				<form action="#">
+    				<form action="/action_page.php">
     					<div class="mdl-textfield mdl-js-textfield">
-    						<input class="mdl-textfield__input" type="text" id="inputUsername" />
-    						<label class="mdl-textfield__label" for="username">Email Address</label>
+    						<input class="mdl-textfield__input" type="text" id="period1" />
+    						<label class="mdl-textfield__label" for="username">Period 1</label>
     					</div>
     					<div class="mdl-textfield mdl-js-textfield">
-    						<input class="mdl-textfield__input" type="password" id="inputPassword" />
-    						<label class="mdl-textfield__label" for="userpass">Password</label>
+    						<input class="mdl-textfield__input" type="text" id="period2" />
+    						<label class="mdl-textfield__label" for="userpass">Period 2</label>
+    					</div>
+						<div class="mdl-textfield mdl-js-textfield">
+    						<input class="mdl-textfield__input" type="text" id="period3" />
+    						<label class="mdl-textfield__label" for="userpass">Period 3</label>
+    					</div>
+						<div class="mdl-textfield mdl-js-textfield">
+    						<input class="mdl-textfield__input" type="text" id="period4" />
+    						<label class="mdl-textfield__label" for="userpass">Period 4</label>
     					</div>
     				</form>
     			</div>
     			<div class="mdl-card__actions mdl-card--border">
-    				<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="signInButton();">Login</button>
-    			</div>
+    				<button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" onclick="getUserAttributes();">update</button>
+					<script src="./js/classes.js"></script>
+				</div>
     		</div>
     	</main>
     </div>
@@ -103,6 +116,8 @@
         </div>
       </div>
 		</div>
-
+	<script>
+		
+</script>
   </body>
 </html>
